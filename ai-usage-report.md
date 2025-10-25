@@ -21,7 +21,7 @@ requestAnimationFrame(() => {
     status.classList.add('show');
   });
 });
-```
+
 
 ### 2. Scroll-Based Fade-In Animations
 **Problem**: Needed elements to appear smoothly as user scrolls.
@@ -44,7 +44,7 @@ requestAnimationFrame(() => {
 **Problem**: Theme didn't persist across page reloads
 
 **AI Contribution**:
-- Suggested localStorage for theme persistence
+- Suggested localStorage for theme persistence and how to implement it
 - Provided logic to save and load theme preference
 - Recommended smooth CSS transitions
 
@@ -136,8 +136,8 @@ Unnecessary features—stayed focused on requirements
 ### After AI
 - Validated form with error messages
 - Smooth scroll-based animations
-- Persistent theme preference
-- Professional shake/fade effects
+- persistent theme preference
+- fade effects
 - Complete documentation
 
 

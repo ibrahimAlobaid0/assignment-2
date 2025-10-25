@@ -234,3 +234,50 @@ body.dark-theme #form-status.error {
   color: #f5a9a9;
   border-color: #6b2929;
 }
+
+
+
+
+/* Loading spinner */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007acc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: #666;
+}
+
+body.dark-theme .loading-text {
+  color: #ccc;
+}
+
+body.dark-theme .spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #4a9eff;
+}
+
+.retry-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.retry-btn:hover {
+  background-color: #5a6268;
+}
+
+/* ===========================================
+   END OF STYLE.CSS
+   =========================================== */

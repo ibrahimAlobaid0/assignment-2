@@ -109,5 +109,26 @@
       <p id="form-status"></p>
     </form>
   </section>
+  <!-- ========================= -->
+  <p class="section fade-in" id="joke">Daily Developer Joke</p><br>
+<section class="container fade-in">
+  <!-- Loading -->
+  <div id="joke-loading" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+    <div class="spinner"></div>
+    <span class="loading-text">Loading joke...</span>
+  </div>
+
+  <!-- Error -->
+  <div id="joke-error" style="display: none; text-align: center; padding: 20px;">
+    <p style="color: #721c24; font-size: 18px;">⚠️ Failed to load joke.</p>
+    <button id="retry-joke" class="retry-btn">Retry</button>
+  </div>
+
+  <!-- Joke display -->
+  <div id="joke-content" style="display: none; text-align: center; padding: 20px;">
+    <p style="font-size: 40px;">😄</p>
+    <p id="joke-text" style="font-size: 18px; line-height: 1.6;"></p>
+  </div>
+</section>
 </body>
 </html>
