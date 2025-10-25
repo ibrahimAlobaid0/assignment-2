@@ -139,41 +139,40 @@ checkProjects();
 /* ===========================================================
    API: FETCH PROGRAMMING JOKE
    =========================================================== */
-function fetchJoke() {
+document.addEventListener('DOMContentLoaded', function() {
   const loading = document.getElementById('joke-loading');
   const error = document.getElementById('joke-error');
   const content = document.getElementById('joke-content');
   const jokeText = document.getElementById('joke-text');
 
-  // Show loading
-  loading.style.display = 'flex';
-  error.style.display = 'none';
-  content.style.display = 'none';
+  function fetchJoke() {
+    // show loading
+    loading.style.display = 'flex';
+    error.style.display = 'none';
+    content.style.display = 'none';
+    //wait 2 seconds to simulate loading using setTimeout
+    setTimeout(() => {}, 10000);
 
-  fetch('https://official-joke-api.appspot.com/random_joke')
-    .then(response => response.json())
-    .then(data => {
-      // Hide loading, show joke
-      loading.style.display = 'none';
-      content.style.display = 'block';
-      jokeText.innerHTML = `<strong>${data.setup}</strong><br><br>${data.punchline}`;
-    })
-    .catch(err => {
-      // Show error
-      loading.style.display = 'none';
-      error.style.display = 'block';
-      console.error('Error:', err);
-    });
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-  // Fetch joke immediately
-  fetchJoke();
-  
-  // Retry button
-  const retryBtn = document.getElementById('retry-joke');
-  if (retryBtn) {
-    retryBtn.addEventListener('click', fetchJoke);
+    fetch('https://official-joke-api.appspot.com/random_joke')
+      .then(response => response.json())
+      .then(data => {
+        setTimeout(() => {
+          loading.style.display = 'none';
+          content.style.display = 'block';
+          jokeText.innerHTML = `<strong>${data.setup}</strong><br><br>${data.punchline}`;
+        }, 1000);
+      })
+      .catch(err => {
+        setTimeout(() => {
+          loading.style.display = 'none';
+          error.style.display = 'block';
+          console.error('Error:', err);
+        }, 2000);
+      });
   }
+
+  fetchJoke();
+
+  const retryBtn = document.getElementById('retry-joke');
+  if (retryBtn) retryBtn.addEventListener('click', fetchJoke);
 });

@@ -238,7 +238,7 @@ body.dark-theme #form-status.error {
 
 
 
-/* Loading spinner */
+/* loading spinner */
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
   border-left-color: #007acc;
