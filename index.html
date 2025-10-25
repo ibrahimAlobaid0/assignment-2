@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibrahim Aloabid's Portfolio</title>
+
+  <!-- External stylesheet and script -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- ========================= -->
+  <!-- PAGE HEADER / NAVIGATION -->
+  <!-- ========================= -->
+  <p class="section fade-in">Ibrahim Aloabid</p>
+
+  <header class="container fade-in">
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Theme toggle button -->
+    <button id="theme-toggle">Toggle Theme (dark/light)</button>
+  </header>
+
+  <!-- ========================= -->
+  <!-- ABOUT SECTION -->
+  <!-- ========================= -->
+  <p class="section fade-in" id="about">About Me</p><br>
+  <section class="container fade-in">
+    <img src="assets/guy coding.jpg" alt="Ibrahim Aloabid" class="photo fade-in">
+
+    <p class="fade-in">
+      Hello! I'm Ibrahim Aloabid, a passionate web developer with experience in creating dynamic and
+      responsive websites. I love coding and continuously learning new technologies.
+      I have a special interest in front-end development and user experience design.
+    </p>
+  </section>
+
+ <!-- ========================= -->
+<!-- PROJECTS SECTION -->
+<!-- ========================= -->
+<p class="section fade-in" id="projects">Projects</p><br>
+
+<section class="container fade-in" id="projects-container">
+
+  <!-- Project cards -->
+  <div class="project fade-in">
+    <h3>Project 1: Portfolio Website <span class="arrow">▶</span></h3>
+    <img src="assets/download.png" alt="Placeholder image" class="fade-in">
+    <p class="description fade-in">
+      A personal portfolio website showcasing my skills and projects.<br>
+      Built with HTML, CSS, and JavaScript.
+    </p>
+  </div>
+
+  <div class="project fade-in">
+    <h3>Project 2: To-Do List App <span class="arrow">▶</span></h3>
+    <img src="assets/download.png" alt="Placeholder image" class="fade-in">
+    <p class="description fade-in">
+      A simple to-do list application that allows users to add, delete, and mark tasks as completed.<br>
+      Built with React.
+    </p>
+  </div>
+
+  <div class="project fade-in">
+    <h3>Project 3: E-commerce Website <span class="arrow">▶</span></h3>
+    <img src="assets/download.png" alt="Placeholder image" class="fade-in">
+    <p class="description fade-in">
+      An e-commerce website with product listings, shopping cart, and checkout functionality.<br>
+      Built with Node.js and Express.
+    </p>
+  </div>
+</section>
+
+<!-- Empty state message -->
+<p id="empty-projects" style="display:none; text-align:center; color:gray; font-style:italic;">
+  No projects found.
+</p>
+
+  
+
+  <!-- ========================= -->
+  <!-- CONTACT SECTION -->
+  <!-- required field for validation-->
+  <!-- ========================= -->
+  <p class="section fade-in" id="contact">Contact Me!</p><br>
+  <section class="container fade-in">
+    <form id="contact-form" class="fade-in">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" required></textarea><br><br>
+
+      <button type="submit">Send</button>
+      
+      <!-- Form status message (separate from fade-in class) -->
+      <p id="form-status"></p>
+    </form>
+  </section>
+</body>
+</html>

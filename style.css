@@ -1,0 +1,236 @@
+/* ===========================================
+   GLOBAL STYLES & THEMES
+   =========================================== */
+
+/* Light Theme (Default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark theme container adjustments */
+body.dark-theme .container {
+  border-color: #444;
+  box-shadow: none;
+}
+
+/* ===========================================
+   TYPOGRAPHY
+   =========================================== */
+.section {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #470909;
+  transition: color 0.4s ease;
+}
+
+/* Section headings in dark theme */
+body.dark-theme .section {
+  color: #f5f5f5;
+}
+
+/* ===========================================
+   CONTAINERS AND LAYOUT
+   =========================================== */
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px lightgray;
+  padding: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===========================================
+   PHOTO STYLING
+   =========================================== */
+.photo {
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 3px 3px 3px lightgray;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================================
+   PROJECT CARDS
+   =========================================== */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 5px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px lightgray;
+  padding: 15px;
+  width: 300px;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Expandable project header and arrow */
+.project h3 {
+  cursor: pointer;
+  color: #007acc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.project h3:hover {
+  color: #011c2f;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when expanded */
+.project.active .arrow {
+  transform: rotate(90deg);
+}
+
+/* Hidden project description */
+.description {
+  display: none;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+/* ===========================================
+   BUTTON STYLING
+   =========================================== */
+button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/* ===========================================
+   FADE-IN ANIMATION (on scroll)
+   =========================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================================
+   SMOOTH SCROLLING
+   =========================================== */
+html{
+  scroll-behavior: smooth;
+}
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .photo {
+    width: 90%;
+  }
+
+  .project {
+    width: 90%;
+  }
+}
+
+/* ===========================================
+   FORM STATUS MESSAGE ANIMATIONS
+   =========================================== */
+#form-status {
+  opacity: 0;  /* Start invisible */
+  transform: translateY(-10px);  /* Start above */
+  transition: opacity 0.4s ease, transform 0.4s ease;  /* Smooth transition */
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#form-status.show {
+  opacity: 1;  /* Fade to visible */
+  transform: translateY(0);  /* Slide down */
+}
+
+/* Success message styling */
+#form-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Error message styling */
+#form-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  animation: shake 0.5s;
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* Dark theme adjustments */
+body.dark-theme #form-status.success {
+  background-color: #1e4620;
+  color: #a3d9a5;
+  border-color: #2d5f2e;
+}
+
+body.dark-theme #form-status.error {
+  background-color: #4a1c1c;
+  color: #f5a9a9;
+  border-color: #6b2929;
+}
