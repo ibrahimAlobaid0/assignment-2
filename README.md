@@ -2,7 +2,7 @@
 
 Modern, responsive portfolio showcasing web development projects with comprehensive form validation, smooth animations, and dark/light theme switching.
 
-## ✨ Features
+##  Features
 
 ### Design & Interaction
 - **Responsive Layout**: Works on desktop, tablet, and mobile
@@ -18,14 +18,14 @@ Modern, responsive portfolio showcasing web development projects with comprehens
 - **Success/Error Messages**: Animated confirmations with fade and slide effects
 - **Retry Mechanism**: Button to retry failed submissions
 
-## 🛠️ Technologies
+##  Technologies
 
 - **HTML5**: Semantic structure with proper accessibility
 - **CSS3**: Flexbox, animations, transitions, keyframes
 - **JavaScript ES6+**: Form validation, scroll animations, theme persistence
 - **LocalStorage**: Saves theme preference across sessions
 
-## 📋 Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
@@ -48,17 +48,17 @@ Modern, responsive portfolio showcasing web development projects with comprehens
    - Try invalid inputs to see error handling
    - Scroll to see fade-in animations
 
-## 🎨 Customization
+##  Customization
 
 - **Content**: Edit sections in `index.html`
 - **Styling**: Modify colors and animations in `style.css`
 - **Projects**: Add new `.project` divs
 
-## 🌐 Browser Support
+##  Browser Support
 
-Chrome, Firefox, Safari, Edge (latest) + mobile browsers
+Chrome, Firefox, Safari, Edge + mobile browsers
 
-## ♿ Accessibility
+##  Accessibility
 
 - Semantic HTML5 elements
 - Proper label associations
@@ -66,16 +66,16 @@ Chrome, Firefox, Safari, Edge (latest) + mobile browsers
 - Keyboard navigation
 - High contrast in both themes
 
-## 🎯 User Experience
+##  User Experience
 
-✅ Immediate visual feedback  
-✅ Clear error messages  
-✅ Loading indicators  
-✅ Error recovery options  
-✅ Smooth animations  
-✅ Persistent preferences  
+Immediate visual feedback  
+Clear error messages  
+Loading indicators  
+Error recovery options  
+Smooth animations  
+Persistent preferences  
 
-## 🤖 AI Assistance
+##  AI Assistance
 
 AI tools assisted with code organization, validation patterns, and documentation. Core design and functionality remain original work.
 

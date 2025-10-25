@@ -222,7 +222,7 @@ html{
   75% { transform: translateX(10px); }
 }
 
-/* Dark theme adjustments */
+/* Dark theme adjustment */
 body.dark-theme #form-status.success {
   background-color: #1e4620;
   color: #a3d9a5;
